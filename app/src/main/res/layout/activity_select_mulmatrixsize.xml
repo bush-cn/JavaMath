@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/textView5"
+        tools:layout_marginTop="74dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="输入矩阵大小"
+        android:textSize="48sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:orientation="horizontal"
+        android:paddingTop="70dp">
+
+        <EditText
+            android:id="@+id/mul_editTextRows1"
+            tools:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="105dp"
+            android:layout_weight="3"
+            android:digits="0123456789"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="0dp"
+            android:layout_height="101dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="×"
+            android:textSize="60sp" />
+
+        <EditText
+            android:id="@+id/mul_editTextColumns1"
+            tools:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="105dp"
+            android:layout_weight="3"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textSize="40dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="209dp"
+        android:orientation="horizontal"
+        android:paddingTop="70dp">
+
+        <TextView
+            android:id="@+id/mul_TextRows2"
+            android:layout_width="88dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="0dp"
+            android:layout_height="101dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:text="×"
+            android:textSize="60sp" />
+
+        <EditText
+            android:id="@+id/mul_editTextColumns2"
+            tools:inputType="number"
+            android:layout_width="0dp"
+            android:layout_height="105dp"
+            android:layout_weight="3"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textSize="40dp" />
+    </LinearLayout>
+</LinearLayout>

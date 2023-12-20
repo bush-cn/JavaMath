@@ -1,0 +1,29 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 31
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.buaa.JavaMath"
+        minSdkVersion 24
+        targetSdkVersion 31
+        versionCode 15
+        versionName "10"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resConfigs "cn"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:25.3.1'
+    implementation 'com.android.support:design:25.3.1'
+    implementation 'io.github.kexanie.library:MathView:0.0.6'
+//    implementation files('D:\\AndroidSDK\\platforms\\android-31\\android.jar')
+}

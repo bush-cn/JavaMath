@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="16dp"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/statistic_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="一元线性回归实验数据计算器"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/statistic_input_x"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:digits="0123456789 .-"
+        android:editable="true"
+        android:hint="输入自变量x（用空格分开）"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/statistic_input_y"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:digits="0123456789 .-"
+        android:editable="true"
+        android:hint="输入自变量y（用空格分开）"
+        android:inputType="numberSigned"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A1A1A1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#4E4D4D" >
+
+                <TableLayout
+                    android:id="@+id/statistic_table"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:dividerPadding="10dp">
+
+                    <TableRow
+                        android:id="@+id/table_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="24dp">
+
+                        <TextView
+                            android:id="@+id/title_pre"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_column="1" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/x"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="30dp">
+
+                        <TextView
+                            android:id="@+id/x_pre"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:text="x" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/y"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="30dp">
+
+                        <TextView
+                            android:id="@+id/y_pre"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:text="y" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/xy"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="30dp">
+
+                        <TextView
+                            android:id="@+id/xy_pre"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:text="xy" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/x_square"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="30dp">
+
+                        <TextView
+                            android:id="@+id/x_square_pre"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:text="x^2" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/y_square"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:minHeight="30dp">
+
+                        <TextView
+                            android:id="@+id/y_square_pre"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_column="1"
+                            android:layout_gravity="center"
+                            android:text="y^2" />
+                    </TableRow>
+                </TableLayout>
+            </HorizontalScrollView>
+
+            <io.github.kexanie.library.MathView
+                android:id="@+id/sum_latex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                app:engine="MathJax"
+                app:text="\\(\\sum_{i=0}^{n} x=\\quad,
+            \\sum_{i=0}^{n} y=\\quad,\\\\
+            \\sum_{i=0}^{n} xy=\\quad,
+            \\sum_{i=0}^{n} x^2=\\quad,
+            \\sum_{i=0}^{n} y^2=\\quad.\\)">
+
+            </io.github.kexanie.library.MathView>
+
+            <TextView
+                android:id="@+id/average_state"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="平均数计算" />
+
+            <io.github.kexanie.library.MathView
+                android:id="@+id/average_latex"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                app:engine="MathJax"
+                app:text="\\( \\bar x= \\quad,
+                                \\bar y = \\quad,\\\\
+                                 {\\bar x}^2= \\quad,
+                                 {\\bar y}^2= \\quad,\\\\
+                                 \\bar {x^2}= \\quad,
+                                 \\bar{y^2}= \\quad \\)"></io.github.kexanie.library.MathView>
+
+            <TextView
+                android:id="@+id/regression_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="回归系数" />
+
+            <io.github.kexanie.library.MathView
+                android:id="@+id/regression_latex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                app:engine="MathJax"
+                app:text="\\(  b = \\cfrac{\\bar x\\bar y - \\bar{xy}}
+                {{\\bar x}^2 - \\bar {x^2}} = \\quad, \\\\
+                a = \\bar y - b \\bar x = \\quad.
+                \\)"></io.github.kexanie.library.MathView>
+
+            <TextView
+                android:id="@+id/correlation_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="相关系数" />
+
+            <io.github.kexanie.library.MathView
+                android:id="@+id/correlation_latex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                app:engine="MathJax"
+                app:text="\\(  r = \\cfrac{\\bar {xy} - \\bar x \\bar y}
+                 {\\sqrt{(\\bar{x^2} - {\\bar x}^2) (\\bar{y^2} - {\\bar y}^2)}} = \\quad .
+                \\)"></io.github.kexanie.library.MathView>
+
+            <TextView
+                android:id="@+id/uncertainty_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="不确定度" />
+
+            <io.github.kexanie.library.MathView
+                android:id="@+id/uncertainty_latex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="center"
+                app:engine="MathJax"
+                app:text="\\(  u(b)= b\\sqrt{\\cfrac{1}{k-2} (\\cfrac{1}{r^2} - 1)} = \\quad,\\\\
+                u(a) = \\sqrt{\\bar{x^2}} \\cdot u(b) = \\quad. \\\\
+                \\)"></io.github.kexanie.library.MathView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

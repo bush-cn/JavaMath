@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <GridView
+        android:id="@+id/bar_numeric"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="3.6"
+        android:background="#424242" />
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#757575"
+            android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-light"
+                android:text="DEL"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingRight="12dp"
+                android:paddingTop="6dp"
+                android:text="CLR"
+                android:textColor="@color/colorWhite"
+                android:textSize="12sp" />
+
+        </FrameLayout>
+
+        <GridView
+            android:id="@+id/bar_operator"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#757575" />
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:id="@+id/drawer_right"
+        android:layout_width="20dp"
+        android:layout_height="match_parent"
+        android:background="#bdbdbd"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:src="@drawable/ic_left" />
+
+</LinearLayout>

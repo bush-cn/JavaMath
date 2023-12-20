@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.buaa.JavaMath">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+
+    <application
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.buaa.JavaMath.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.buaa.JavaMath.ResultsActivity"
+            android:label="运算结果" />
+        <activity
+            android:name="com.buaa.JavaMath.CapitalMoneyActivity"
+            android:label="大写数字"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.buaa.JavaMath.BigDecimalActivity"
+            android:label="大数运算"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.buaa.JavaMath.BaseConversionActivity"
+            android:label="进制转换"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.StatisticActivity"
+            android:label="统计数据"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.buaa.JavaMath.MatrixActivityGeneral"
+            android:label="矩阵运算"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.buaa.JavaMath.MatrixAdd"
+            android:label="矩阵加法"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.CalMatrixAdd"
+            android:label="矩阵加法"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.ShowAddActivity"
+            android:label="矩阵加法"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.buaa.JavaMath.MatrixSub"
+            android:label="矩阵减法"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.CalMatrixSub"
+            android:label="矩阵减法"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.ShowSubActivity"
+            android:label="矩阵减法"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.buaa.JavaMath.MatrixMul"
+            android:label="矩阵乘法"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.CalMatrixMul"
+            android:label="矩阵乘法"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.ShowMulActivity"
+            android:label="矩阵乘法"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="com.buaa.JavaMath.MatrixTrans"
+            android:label="矩阵转置"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.CalMatrixTrans"
+            android:label="矩阵转置"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.buaa.JavaMath.ShowTransActivity"
+            android:label="矩阵转置"
+            android:screenOrientation="portrait" />
+        <activity android:name=".LaTeXActivity"
+            android:label="公式编辑"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.buaa.JavaMath.AboutActivity"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>
